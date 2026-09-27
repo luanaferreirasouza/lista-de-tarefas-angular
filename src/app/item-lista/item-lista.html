@@ -1,0 +1,20 @@
+<h1> Minhas Tarefas </h1>
+
+@for (item of tarefas; track item.descricao) {
+    <div class= "item">
+        <input type="checkbox" [checked] = "item.concluida" (change)="marcarFeito(item)">
+        <p [class.riscado] = "item.concluida"> {{item.descricao}} </p>
+        <button (click)="removerTarefa(item)">
+            Remover Tarefa
+        </button>
+    </div>
+} @empty {
+    <p> Nenhuma tarefa adicionada. </p>
+}
+<div class="campo">
+    <input type="text" placeholder="Digite uma nova tarefa..." [(ngModel)]="novaTarefa">
+    <button (click)="adicionarItem()">
+        Adicionar Tarefa
+    </button>
+<h3> Tarefas Concluídas: {{ contadorItensConcluidos() }} </h3>
+</div>

@@ -1,0 +1,25 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.riscado {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.h1{
+    text-align: center;
+    
+}
